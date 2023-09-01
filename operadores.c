@@ -46,6 +46,23 @@ void calculateMagnitude()
         scanf("%f", &numbers[i]);
     }
 
+    if(a > b && a > c && a > d)
+    {
+        printf("maior é %f", a);
+    }
+    else if(b > c && b > d)
+    {
+        printf("maior é %f", b);
+    }
+    else if(c > d)
+    {
+        printf("maior é %f", c);
+    }
+    else
+    { 
+        printf("maior é %f", d);    
+    }
+
 };
 
 void ascNumbers()
