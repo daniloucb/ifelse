@@ -36,54 +36,57 @@ void checkNumbers()
 
 void calculateMagnitude()
 {
-    float numbers[4];
-    float biggest, lowest;
-    int i, j;
+    float number, biggest, lowest;
+    int i;
+
     printf("digite 4 números a ser comparados: \n");
 
-    for(i = 0; i < 4; i++)
-    {
-        scanf("%f", &numbers[i]);
+    scanf("%f", &number);
+
+    biggest = lowest = number
+
+    for (i = 0; i < 3; i++)
+    { 
+        scanf ("%f", &number);
+        if (biggest < number)
+            biggest = number;
+        else if (lowest > number)
+            lowest = number;
     }
 
-    if(a > b && a > c && a > d)
-    {
-        printf("maior é %f", a);
-    }
-    else if(b > c && b > d)
-    {
-        printf("maior é %f", b);
-    }
-    else if(c > d)
-    {
-        printf("maior é %f", c);
-    }
-    else
-    { 
-        printf("maior é %f", d);    
-    }
+    printf("maior: %f, menor: %f", biggest, lowest);
 
 };
 
 void ascNumbers()
 {
-    float numbers[3];
-    int i, j, k;
+    float a, b, c;
+    int i;
 
     printf("digite 3 números a ser organizados asc: \n");
-    scanf("%f %f %f", &numbers[0], &numbers[1], &numbers[2]);
+    scanf("%f %f %f", &a, &b, &c);
 
-    for(i = 0; i < 3; i++)
+    if(a < b && a < c)
     {
-        for(j = 1; j < 3; j++)
+        printf("%f\n", a);
+        if(b < c)
         {
-            k = 2;
-            if(numbers[i] < numbers[j] && numbers[i] < numbers[k]) 
-            {
-                printf("%f menor que todos: %f %f\n", numbers[i], numbers[j], numbers[k]);
-            }
-            k++;
+           printf("%f\n %f\n", b, c);
         }
+        else
+        {
+          printf("%f\n %f\n", c, b);
+        }
+    }
+
+    if(b < c && b < a)
+    {
+       printf("%f", b);    
+    }
+
+    if(c < a && c < b)
+    { 
+       printf("%f", c);
     }
 };
 
