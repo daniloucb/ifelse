@@ -78,15 +78,28 @@ void ascNumbers()
           printf("%f\n %f\n", c, b);
         }
     }
-
-    if(b < c && b < a)
-    {
-       printf("%f", b);    
-    }
-
-    if(c < a && c < b)
+    else if(b < a && b < c)
     { 
-       printf("%f", c);
+         printf("%f\n", b); 
+  
+         if(a < c){ 
+             printf("%f\n %f\n", a, c);
+         }
+         else
+         {
+             printf("%f\n %f\n", c, a);
+         } 
+    }
+    else
+    { 
+         printf("%f\n", c); 
+  
+         if(A < B){ 
+             printf("%f\n %f\n", a, b); 
+         }else if (B < A){ 
+             printf("%f\n %f\n", b, a); 
+         } 
+  
     }
 };
 
