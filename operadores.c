@@ -6,11 +6,6 @@ void clearBuffer()
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 };
-// Escreva um algoritmo que leia um número e imprima a raiz quadrada do número caso ele seja positivo ou igual a zero e o quadrado do número caso ele seja negativo.
-// Construa um algoritmo que, dado quatro valores, A, B, C e D, o algoritmo imprima o maior e o menor valor. 
-// Dados três valores A, B e C, construa um algoritmo, que imprima os valores de forma ascendente (do menor para o maior).
-// Dados três valores A, B e C, construa um algoritmo, que imprima os valores de forma descendente (do maior para o menor).
-// Construir um algoritmo que leia um número e imprima se ele é igual a 5, a 200, a 400, se está no intervalo entre 500 e 1000, ou se ela está fora dos escopos anteriores. 
 
 void checkNumbers()
 {
@@ -43,7 +38,7 @@ void calculateMagnitude()
 
     scanf("%f", &number);
 
-    biggest = lowest = number
+    biggest = lowest = number;
 
     for (i = 0; i < 3; i++)
     { 
@@ -94,9 +89,9 @@ void ascNumbers()
     { 
          printf("%f\n", c); 
   
-         if(A < B){ 
+         if(a < b){ 
              printf("%f\n %f\n", a, b); 
-         }else if (B < A){ 
+         }else if (b < a){ 
              printf("%f\n %f\n", b, a); 
          } 
   
@@ -105,33 +100,49 @@ void ascNumbers()
 
 void descNumbers()
 {
-    float numbers[3];
-    int i, j, k;
+  float a, b, c;
+    int i;
 
-    scanf("%f %f %f", &numbers[0], &numbers[1], &numbers[2]);
+    printf("digite 3 números a ser organizados asc: \n");
+    scanf("%f %f %f", &a, &b, &c);
 
-    printf("digite 3 números a ser organizados desc: \n");
-
-    if(numbers[0] < numbers[1])
+    if(a > b && a > c)
     {
-        printf("menor %f", numbers[1]);
+        printf("%f\n", a);
+        if(b > c)
+        {
+           printf("%f\n %f\n", b, c);
+        }
+        else
+        {
+          printf("%f\n %f\n", c, b);
+        }
     }
-    else if(numbers[1] < numbers[2])
-    {
-        printf("menor %f", numbers[1]);
-        printf("maior %f", numbers[2]);
-    }
-    else if(numbers[2] < numbers[0])
-    {
-        printf("menor %f", numbers[1]);
-        printf("maior %f", numbers[0]);
+    else if(b > a && b > c)
+    { 
+         printf("%f\n", b); 
+  
+         if(a > c){ 
+             printf("%f\n %f\n", a, c);
+         }
+         else
+         {
+             printf("%f\n %f\n", c, a);
+         } 
     }
     else
-    {
-        printf("menor %f", numbers[1]);
-        printf("maior %f", numbers[2]);
+    { 
+         printf("%f\n", c); 
+  
+         if(a > b){ 
+             printf("%f\n %f\n", a, b); 
+         }else if (b > a){ 
+             printf("%f\n %f\n", b, a); 
+         } 
+  
     }
 };
+
 
 void checkAndCompare()
 {
@@ -151,7 +162,7 @@ void checkAndCompare()
     {
         printf("número %d igual a 400.", number);
     }
-    else if(number >= 500 || number <= 1000)
+    else if(number >= 500 || number >= 1000)
     {
         printf("número %d no intervalo entre 500 e 100.", number);
     }
